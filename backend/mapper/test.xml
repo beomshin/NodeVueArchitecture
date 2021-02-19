@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test"> 
+
+
+        <select id="searchUser">
+            SELECT * FROM UserTb
+        </select>
+
+
+        <select id="searchUser2">
+            SELECT COUNT(*) FROM UserTb WHERE userCod = #{userCode}
+        </select>
+
+
+        <select id="searchUser3">
+            SELECT userCode FROM UserTb WHERE userCode = #{userCode}
+        </select>
+
+
+</mapper>
