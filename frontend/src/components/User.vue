@@ -23,7 +23,7 @@
         <br/>
         ID : <input v-model="id" type="text" />
         <br/>
-        Pw : <input v-model="pw" type="text" />
+        Pw : <input v-model="pw" type="password" />
         <br/>
         <button @click="enrollUser()">submmit</button>
         
@@ -35,7 +35,10 @@
 </template>
 
 <script>
+
+
 export default {
+
     data (){
         return {
             age : undefined,
@@ -55,7 +58,7 @@ export default {
           this.$store.state.name   = data.name;
         })
         .catch((err) => {
-            console.log(err);
+            console.log(err);   
         })
     },
     methods: {
@@ -66,7 +69,10 @@ export default {
             this.$store.dispatch('changeNameAction2');
         },
         enrollUser(){
-            this.$store.dispatch('enrollUser', this._data);
+            this.$store.dispatch('enrollUser', this._data)
+            .then(() => {
+                this.$router.push('/');
+            });
         }
     },
     

@@ -23,9 +23,9 @@ module.exports = {
                                 hashData : hashData.toString('base64')
                             }
 
-                            wistonLogger.debug('Hash512 encypt result : ', result);
+                            wistonLogger.debug('Hash512 encypt result : ', result.hashData);
 
-                            resolve(result);
+                            resolve(result.hashData);
                         })
                     })
 

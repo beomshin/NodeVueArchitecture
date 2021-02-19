@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 
 import axios from 'axios'
-import store from './store/store.js'
+import userStore from './store/User/userStore.js'
 
 Vue.prototype.$http = axios
 
@@ -25,7 +25,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  store,
+  store : userStore,
   components: { App },
   template: '<App/>'
 })

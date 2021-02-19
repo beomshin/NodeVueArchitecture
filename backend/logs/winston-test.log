@@ -1,0 +1,38 @@
+2021-02-19T02:25:44.857Z [winston-test] error: uncaughtException: async is not defined
+ReferenceError: async is not defined
+    at Object.<anonymous> (/home/ubuntu/opt/nodeVue/backend/controller/user.controller.js:10:21)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Object.<anonymous> (/home/ubuntu/opt/nodeVue/backend/routes/v1/user.route.js:4:24)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+2021-02-19T03:52:31.725Z [winston-test] error: ======= sql mapper Error =====
+2021-02-19T03:53:16.288Z [winston-test] error: ======= sql mapper Error =====
+2021-02-19T03:56:34.440Z [winston-test] error: uncaughtException: Error occured during open XML file [./mapper/test.xml]
+Error: Error occured during open XML file [./mapper/test.xml]
+    at MybatisMapper.createMapper (/home/ubuntu/opt/nodeVue/backend/node_modules/mybatis-mapper/index.js:20:10)
+    at Object.<anonymous> (/home/ubuntu/opt/nodeVue/backend/db/db_connection.js:6:15)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Object.<anonymous> (/home/ubuntu/opt/nodeVue/backend/controller/user.controller.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+2021-02-19T04:43:15.049Z [winston-test] error: uncaughtException: Error occured during open XML file [./mapper/test.xml]
+Error: Error occured during open XML file [./mapper/test.xml]
+    at MybatisMapper.createMapper (/home/ubuntu/opt/nodeVue/backend/node_modules/mybatis-mapper/index.js:20:10)
+    at Object.<anonymous> (/home/ubuntu/opt/nodeVue/backend/db/db_connection.js:6:15)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Object.<anonymous> (/home/ubuntu/opt/nodeVue/backend/controller/user.controller.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)

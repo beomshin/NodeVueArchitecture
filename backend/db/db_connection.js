@@ -3,7 +3,7 @@ var mybaitsMapper = require('mybatis-mapper');
 var db_info = require('./db_info');
 const winstonLogger = require('../logger/winston');
 
-mybaitsMapper.createMapper(['./mapper/test.xml']);
+mybaitsMapper.createMapper(['./mapper/user.xml']);
 var format = {language: 'sql', indent: '  '};
 
 var pool = pool?pool:mysql.createPool(db_info.dev);

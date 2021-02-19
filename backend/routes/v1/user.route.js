@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var testJson = require('../../data/test.json');
 const userController = require('../../controller/user.controller')
 
 /* GET users listing. */
@@ -10,9 +9,9 @@ router.get('/test', function(req, res, next) {
         name : 'beom'
     }
 
-   console.log(testJson);
+   console.log(testData);
 
-   res.json(testJson);
+   res.json(testData);
 });
 
 router.post('/', (req, res, next) => {
