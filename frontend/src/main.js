@@ -3,20 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
-import axios from 'axios'
 import userStore from './store/User/userStore.js'
 
+import axios from 'axios'
 Vue.prototype.$http = axios
 
-import BootstrapVue from "bootstrap-vue"
-import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap-vue/dist/bootstrap-vue.css"
-
-Vue.use(BootstrapVue);
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+Vue.use(Vuetify);
 
 import Vuex from 'vuex'
-
 Vue.use(Vuex)
 
 Vue.config.productionTip = false
@@ -25,6 +21,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  vuetify : new Vuetify(),
   store : userStore,
   components: { App },
   template: '<App/>'

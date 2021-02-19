@@ -1,12 +1,14 @@
 <template>
-  <div id="app">
+  <v-app id="app">
     <div>{{getTodo}} </div>
     <div>{{doubleTodoCount}}</div>
     <div>{{getTodCount}}</div>
     <div>{{this.$store.state.num}}</div>
-    <button @click="increaseNum()">click</button>
-    <button @click="increaseNumAction()">click2</button>
-  </div>
+    <v-col cols="2">
+    <v-btn color="success" @click="goUserPage()">userPage</v-btn>
+    <v-btn color="primary" @click="increaseNumAction()">click2</v-btn>
+    </v-col>
+  </v-app>
 </template>
 
 <script>
@@ -34,6 +36,9 @@ export default {
       },
       increaseNumAction(){
         return this.$store.dispatch('increaseNumAction');
+      },
+      goUserPage(){
+        this.$router.push('/user');
       }
     },
 }

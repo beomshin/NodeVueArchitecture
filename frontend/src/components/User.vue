@@ -1,35 +1,45 @@
 <template>
     
+    <v-app>
     <div>
 
         <h1>My Name is {{this.$store.state.name}}</h1>
         <h2>age is {{age}}</h2>
         <h3>gender is {{gender}}</h3>
 
-        <input v-model="this.$store.state.name" type="text">
+        <v-text-field label="Name" hide-details="auto" v-model="this.$store.state.name" type="text" />
 
         <br>
-        <input v-model="age" type="text">
+        <v-text-field label="age" hide-details="auto"  v-model="age" type="text" />
 
         <br/>
-        <select v-model="gender">
-            <option value="M">M</option>
-            <option value="F">F</option>
-        </select>
-
-        <button @click="changeName()">click</button>
-        <button @click="changeName2()">click2</button>
-
+        <v-col cols="6">
+        <v-select
+          v-model="select"
+          :hint="`${select.state}, ${select.abbr}`"
+          :items="items"
+          item-text="state"
+          item-value="abbr"
+          label="Select"
+          persistent-hint
+          return-object
+          single-line
+        ></v-select>
+      </v-col>
         <br/>
-        ID : <input v-model="id" type="text" />
+        <v-btn @click="changeName()">click</v-btn>
+        <v-btn @click="changeName2()">click2</v-btn>
+        <v-btn @click="goBack()">back</v-btn>
         <br/>
-        Pw : <input v-model="pw" type="password" />
+        ID : <v-text-field label="age" hide-details="auto" v-model="id" type="text" />
         <br/>
-        <button @click="enrollUser()">submmit</button>
+        Pw : <v-text-field label="age" hide-details="auto"  v-model="pw" type="password" />
+        <br/>
+        <v-btn @click="enrollUser()">submmit</v-btn>
         
         
     </div>
-
+    </v-app>
     
 
 </template>
@@ -44,7 +54,15 @@ export default {
             age : undefined,
             gender : 'M',
             id : '',
-            pw : ''
+            pw : '',
+            select: { state: 'Florida', abbr: 'FL' },
+            items: [
+            { state: 'Florida', abbr: 'FL' },
+            { state: 'Georgia', abbr: 'GA' },
+            { state: 'Nebraska', abbr: 'NE' },
+            { state: 'California', abbr: 'CA' },
+            { state: 'New York', abbr: 'NY' },
+            ],
         }
     }
     ,created() {
@@ -71,8 +89,12 @@ export default {
         enrollUser(){
             this.$store.dispatch('enrollUser', this._data)
             .then(() => {
+                alert("회원가입 성공");
                 this.$router.push('/');
             });
+        },
+        goBack(){
+            this.$router.go(-1)
         }
     },
     
