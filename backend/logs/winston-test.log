@@ -36,3 +36,19 @@ Error: Error occured during open XML file [./mapper/test.xml]
     at require (internal/modules/cjs/helpers.js:88:18)
     at Object.<anonymous> (/home/ubuntu/opt/nodeVue/backend/controller/user.controller.js:1:16)
     at Module._compile (internal/modules/cjs/loader.js:1063:30)
+2021-02-21T03:43:23.883Z [winston-test] error: uncaughtException: Cannot read property 'beginTransaction' of undefined
+TypeError: Cannot read property 'beginTransaction' of undefined
+    at /home/beom/workspace/mpb-menu-admin/NodeVueArchitecture/backend/db/db_connection.js:20:28
+    at /home/beom/workspace/mpb-menu-admin/NodeVueArchitecture/backend/node_modules/mysql2/lib/pool.js:60:18
+    at PoolConnection.<anonymous> (/home/beom/workspace/mpb-menu-admin/NodeVueArchitecture/backend/node_modules/mysql2/lib/connection.js:739:13)
+    at Object.onceWrapper (events.js:422:26)
+    at PoolConnection.emit (events.js:327:22)
+    at PoolConnection._notifyError (/home/beom/workspace/mpb-menu-admin/NodeVueArchitecture/backend/node_modules/mysql2/lib/connection.js:225:12)
+    at ClientHandshake.<anonymous> (/home/beom/workspace/mpb-menu-admin/NodeVueArchitecture/backend/node_modules/mysql2/lib/connection.js:114:14)
+    at ClientHandshake.emit (events.js:327:22)
+    at ClientHandshake.execute (/home/beom/workspace/mpb-menu-admin/NodeVueArchitecture/backend/node_modules/mysql2/lib/commands/command.js:33:14)
+    at PoolConnection.handlePacket (/home/beom/workspace/mpb-menu-admin/NodeVueArchitecture/backend/node_modules/mysql2/lib/connection.js:425:32)
+2021-02-21T03:44:06.038Z [winston-test] error: ======= sql snytax Error =====
+2021-02-21T03:44:06.042Z [winston-test] error: ======= sql mapper Error =====
+2021-02-21T03:44:41.383Z [winston-test] error: ======= sql snytax Error =====
+2021-02-21T03:44:41.384Z [winston-test] error: ======= sql mapper Error =====

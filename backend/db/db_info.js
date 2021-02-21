@@ -4,9 +4,9 @@ module.exports = (() => {
             dev : {
                 host : 'localhost',
                 port : '3306',
-                user : 'beom',
-                password : 'beom12!@' ,
-                database : 'beom'
+                user : 'modnAdmin',
+                password : 'modn12!@' ,
+                database : 'modnMenuAdmin'
             },
             test : {
                 host : process.env.TEST_HOST,
